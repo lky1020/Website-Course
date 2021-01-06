@@ -19,6 +19,7 @@ input{
     overflow: hidden;
 }
 
+/* Draw the 'Blue' background of the website */
 .container:before{
     content: '';
     position: absolute;
@@ -52,7 +53,7 @@ input{
     z-index: 5;
     transition: 1s 0.7s ease-in-out;
 }
-
+/* Set the Form to column 1 and row 1 */
 form{
     display: flex;
     align-items: center;
@@ -65,10 +66,12 @@ form{
     transition: 0.2s 0.7s ease-in-out;
 }
 
+/* Show the sign in form first */
 form.sign-in-form{
     z-index: 2;
 }
 
+/* Show when user click sign up btn */
 form.sign-up-form{
     z-index: 1;
     opacity: 0;
@@ -80,6 +83,7 @@ form.sign-up-form{
     margin-bottom: 10px;
 }
 
+/* Set 2 column to put the icon and the input */
 .input-field{
     max-width: 380px;
     width: 100%;
@@ -232,20 +236,24 @@ form.sign-up-form{
     right: 52%;
 }
 
+/* Move away the left panel */
 .container.sign-up-mode .left-panel .image,
 .container.sign-up-mode .left-panel .content{
     transform: translateX(-800px);
 }
 
+/* Move in the right panel */
 .container.sign-up-mode .right-panel .content, 
 .container.sign-up-mode .right-panel .image{
     transform: translateX(0px);
 }
 
+/* Not allow the user to click the left panel when sign in */
 .container.sign-up-mode .left-panel{
     pointer-events: none;
 }
 
+/*  Allow the user to click the left panel when sign up */
 .container.sign-up-mode .right-panel{
     pointer-events: all;
 }
